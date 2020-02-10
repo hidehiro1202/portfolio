@@ -1,0 +1,218 @@
+.top-hero-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('top1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
+  background-attachment: fixed;
+}
+
+.h1-text{
+  margin-top: 500px;
+  margin-left: -70px;
+  font-size: 70px;
+  font-family: HiraMinPro-W6;
+  color: #ffffff;
+}
+
+.h2-text{
+  font-family: HiraMinPro-W6;
+  margin-left: -40px;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+
+.navbar {
+  height: 100px;
+}
+
+.navbar-transparent{
+  margin-bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important ;
+  }
+}
+
+.navigation{
+  margin-top: 40px;
+  width: 500px;
+  height: 60px;
+  text-align: right;
+}
+
+.navigation-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: solid 2px #20b2aa;
+  border-radius: 50px;
+  font-family: Comic Sans MS;
+  font-size: 15px;
+  color: #fff;
+}
+
+.navigation-button-2 {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: solid 2px #20b2aa;
+  border-radius: 30px;
+  font-family: Comic Sans MS;
+  font-size: 15px;
+  color: #fff;
+}
+
+
+.pull-right{
+  margin-right: 90px;
+}
+
+
+
+.middle-hero-wrapper {
+  width: 100vw;
+  height: 700px;
+  //background-image: url('top1.jpg')
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:#fdf5e6 ;
+  background-attachment: fixed;
+}
+
+
+.middle-text{
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: HiraMinPro-W6;
+  color: #ffd700;
+}
+
+.middle-text-2{
+  font-family: HiraMinPro-W6;
+  margin-left: -40px;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+
+.under-hero-wrapper {
+  width: 100vw;
+  height: 350px;
+  //background-image: url('top1.jpg')
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff0f5;
+  background-attachment: fixed;
+  img{
+    height: 230px;
+    width: 380px;
+    margin-left: 700px;
+  }
+}
+
+
+.under-text{
+  margin-top: 10px;
+  font-size: 50px;
+  font-family: HiraMinPro-W6;
+  color: #ffffff;
+}
+
+.under-text-2{
+  font-family: HiraMinPro-W6;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.copyright{
+  color: #000;
+  text-align: center;
+  padding: 10px 0px;
+  background-color: #dcdcdc;
+  margin-bottom: -10px;
+}
+
+.img{
+  width: 40px;
+  height: 40px;
+}
+
+.middle-content{
+  font-size: 35px;
+  font-family: HiraMinPro-W6;
+  margin-bottom: -20px;
+}
+
+.under-content{
+  margin-top: 60px;
+}
+
+.top-content{
+  margin-top: 30px;
+}
+
+
+.tiiki-content{
+  padding: 10px 10px;
+
+}
+
+.tiiki-text{
+  font-size: 15px;
+  font-family: Hiragino Kaku Gothic Pro;
+  line-height: 35px;
+}
+
+
+.user-new-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
+  background-attachment: fixed;
+}
+
+.alert{
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  background-color: #c0c0c0;
+}
+
+.user-h1-text{
+  color:#ffffff;
+  margin-top: 40px;
+}
+
+.form-user{
+  margin-top: 20px;
+}
+
+.text-while{
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.login-text{
+  color: #ffffff;
+}
+
+.profil-title{
+  font-size: 30px;
+  font-family: HiraMinPro-W6;
+  margin-top: 130px;
+  border: solid;
+  padding-left: 30px;
+  padding-top: 10px;
+  width: 400px;
+  height: 80vh;
+}

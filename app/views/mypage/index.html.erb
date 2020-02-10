@@ -1,0 +1,24 @@
+<div class="navbar navbar-default navbar-fixed-top navbar-transparent">
+ <div class="pull-right">
+   <div class="navigation">
+     <% if logged_in? %>
+     <%= link_to "TOPに戻る", root_path , class: "navigation-button" %>
+     <%= link_to "ログアウト", logout_path , class: "navigation-button-2", method: :delete %>
+     <% else %>
+     <%= link_to "登録はこちら", new_user_path , class: "navigation-button" %>
+     <%= link_to "ログイン", login_path , class: "navigation-button-2" %>
+     <% end %>
+   </div>
+  </div>
+</div>
+
+<div class="mypage-profil-content">
+ <div class="container">
+   <div class="row">
+     <div class="profil-title text-left">
+      <p>プロフィール</p>
+      
+     </div>
+   </div>
+ </div>
+</div>

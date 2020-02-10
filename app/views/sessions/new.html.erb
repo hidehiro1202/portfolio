@@ -1,0 +1,23 @@
+<div class="user-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <h1 class="user-h1-text text-center">ログイン</h1>
+      <div class="col-md-offset-4 col-md-4 col-md-offset-4 form-user">
+      <%= form_for :session, url: login_path do |f| %>
+      <div class="form-group">
+       <%= f.label :email, class: 'text-while ' %>
+       <%= f.text_field :email, class: 'form-control' %>
+      </div>
+       <div class="form-group">
+       <%= f.label :password, class: 'text-while' %>
+       <%= f.text_field :password, class: 'form-control' %>
+      
+      <%= f.submit "ログイン", class: 'btn-white' %>
+      <% end %>
+      <div class="login-text">
+      </div>
+     </div>
+      
+    </div>
+  </div>
+</div>
