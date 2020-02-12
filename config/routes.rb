@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   
   resources :users
-  resources :mypage
+  resources :mypages
+  resources :profils
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

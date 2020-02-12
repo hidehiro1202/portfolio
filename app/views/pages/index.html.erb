@@ -3,7 +3,7 @@
    <div class="navigation">
      <% if logged_in? %>
      <%= link_to "TOPに戻る" , root_path ,{class: "navigation-button"} %>
-     <%= link_to "マイページへ" , mypage_index_path ,{ class: "navigation-button-2"} %>
+     <%= link_to "マイページへ" , mypages_path ,{ class: "navigation-button-2"} %>
      <% else %>
      <%= link_to "登録はこちら" , new_user_path ,{class: "navigation-button"} %>
      <%= link_to "ログイン" , login_path ,{ class: "navigation-button-2"} %>
