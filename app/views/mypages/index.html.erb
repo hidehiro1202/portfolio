@@ -17,14 +17,7 @@
    <div class="row">
      <div class="profil-title text-left">
       <p>プロフィール</p>
-      <%= link_to "ユーザー登録", new_mypage_path, {class: "toroku-text" } %>
-      
-      <p class="user-name">
-       ユーザー名：<%= current_user.name %>
-      </p>
-      
-      <p class="mypage-text"><%= mypage.description %></p>
-    
+      <%= link_to "ユーザー登録", edit_mypage_path(current_user.id) , {class: "toroku-text" } %>
      </div>
    </div>
  </div>

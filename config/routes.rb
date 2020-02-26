@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :users
   resources :mypages
   resources :profils
+  resources :spots
+  resources :areas
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

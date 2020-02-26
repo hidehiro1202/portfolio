@@ -1,0 +1,51 @@
+<div class="navbar navbar-default navbar-fixed-top navbar-transparent">
+ <div class="pull-right">
+   <div class="navigation">
+     <% if logged_in? %>
+     <%= link_to "TOPに戻る" , root_path ,{class: "navigation-button"} %>
+     <%= link_to "ログアウト", logout_path , class: "navigation-button-2", method: :delete %>
+     <% else %>
+     <%= link_to "登録はこちら" , new_user_path ,{class: "navigation-button"} %>
+     <%= link_to "ログイン" , login_path ,{ class: "navigation-button-2"} %>
+     <% end %>
+   </div>
+  </div>
+</div>
+
+<div class="mypage-profil-content">
+   <div class="container">
+     <div class="row">
+     <div class="profil-title text-left">
+      <p class= "user-title">プロフィール
+      <%= link_to "ユーザー情報編集", edit_mypage_path(current_user.id) , {class: "toroku-text" } %>
+      </p>
+      
+      <div class= "user-image-form">
+      <% if @mypage.image? %>
+       <%= image_tag @mypage.image.url, class:"user-image" %>
+      <% else %>
+       <%= image_tag "icons/sample.png" %>
+      <% end %>
+      </div>
+      
+      <div class= "user-name">
+      <p class="user-form-text">・ユーザー名</p>
+      <div class="user-name-in">
+        <%= current_user.name %>
+      </div>
+      </div>
+      
+      <div class= "user-description-form">
+      <p class="user-form-text">・目標</p>
+      <div class="user-description-in">
+      <% if @mypage.description? %>
+      <%= @mypage.description %>
+      <% else %>
+      <%= ここに目標が入ります %>
+      <% end %>
+      
+     </div>
+     </div>
+   </div>
+</div>
+
