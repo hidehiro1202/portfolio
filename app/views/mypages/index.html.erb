@@ -22,3 +22,24 @@
    </div>
  </div>
 </div>
+
+<div class="favorite-spot-index">
+ <div class="container">
+  <% @favorite_spots.each do |spot| %>
+   <div class="row">
+    <div class="col-md-offset-6 col-md-5 favorite-content">
+          <%= image_tag spot.image.url, class:"favorite-image-spot" %>
+          <div class="favorite-spot-name">
+            <p class="favorite-spot-text">
+            <%= spot.spot_name %>
+            </p>
+          </div>
+          <div class="favorite-spot-description">
+           <p class="favorite-spot-description-title">詳細</p>
+           <%= spot.description %>
+          </div>
+    </div>
+   </div>
+   <% end %>
+ </div>
+</div>

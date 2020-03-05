@@ -206,7 +206,6 @@
   font-family: HiraMinPro-W6;
   margin-top: 130px;
   border: solid;
-  padding-left: 30px;
   padding-top: 10px;
   width: 400px;
   height: 80vh;
@@ -224,6 +223,7 @@
 }
 
 .user-image-form{
+  padding-left: 20px;
   margin-top: 30px;
 }
 
@@ -249,7 +249,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #faf0e6;
+  background-color: #efefef;
   background-attachment: fixed;
 }
 
@@ -267,13 +267,15 @@
 .user-name-in{
   margin-left: 20px;
   margin-bottom: 30px;
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 25px;
   font-family: 游ゴシック;
 }
 
 .user-description-in {
   margin-left: 20px;
-  font-size: 30px;  
+  margin-top: 10px;
+  font-size: 20px;  
 }
 
 
@@ -282,7 +284,7 @@
 }
 
 .menu-content {
-  margin-top: 100px;
+  margin-top: 120px;
   height: 300px;
   width: 200px;
   background-color: #fffafa;
@@ -296,9 +298,102 @@
   top: 10px;
 }
 
+
 .slideshow{
-  margin-top: 100px;
+  margin-top: -290px;
+  margin-bottom: 300px;
   width: 500px;
   height: 300px;
   background-color: #fff;
+}
+
+
+.user-image-spot{
+  margin-left: 10px;
+  padding-top: 20px;
+  padding-left: 150px;
+  width: 600px;
+  height: 200;
+}
+
+.spot-content{
+  margin-top: 120px;
+  width: 800px;
+  height: 600px;
+  background-color: #fff;
+}
+
+.spot-back{
+  height: 100vh;
+  width: 100vw;
+  background-color: #efefef;
+}
+
+.spot-name{
+  padding-left: 160px;
+  margin-top: 20px;
+}
+
+.spot-text{
+  width: 450px;
+  border-bottom: solid 2px #b20000;
+}
+
+.spot-description-title{
+  margin-top: 20px;
+}
+
+.spot-description{
+  padding-left: 160px;
+  width: 600px;
+}
+
+.favorite-spot{
+  margin-left: 160px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-top: 17px;
+  border: solid 2px #b20000;
+  width: 200px;
+  height: 60px;
+  font-size: 14px;
+}
+
+.favorite-content{
+  height: 900px;
+  width: 500px;
+  background-color: #fff;
+  margin-top: -590px;
+}
+
+
+.favorite-image-spot{
+  margin-left: 90px;
+  padding-top: 20px;
+  padding-left: 10px;
+  width: 250px;
+  height: 170px;
+}
+
+.favorite-spot-name{
+  padding-left: 5px;
+  margin-top: 20px;
+}
+
+.favorite-spot-text{
+  width: 450px;
+  border-bottom: solid 2px #b20000;
+  font-size: 10px;
+}
+
+.favorite-spot-description-title{
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.favorite-spot-description{
+  padding-left: 10px;
+  width: 450px;
+  font-size: 10px;
+  margin-bottom: 30px;
 }

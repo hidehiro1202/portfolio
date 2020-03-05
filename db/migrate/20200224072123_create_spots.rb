@@ -5,6 +5,7 @@ class CreateSpots < ActiveRecord::Migration[5.2]
       t.integer :id
       t.string :spot_name
       t.string :description
+      t.string :image
 
       t.timestamps
     end

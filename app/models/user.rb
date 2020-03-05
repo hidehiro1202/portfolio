@@ -21,5 +21,7 @@ class User < ApplicationRecord
   has_secure_password
   
   has_many :mypages
+  has_many :favorites
+  has_many :favorite_spots, through: :favorites, source: 'spot'
   
 end

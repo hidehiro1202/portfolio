@@ -1,0 +1,48 @@
+<div class="spot-back">
+
+<div class="navbar navbar-default navbar-fixed-top navbar-transparent">
+ <div class="pull-right">
+   <div class="navigation">
+     <% if logged_in? %>
+     <%= link_to "TOPに戻る" , root_path ,{class: "navigation-button"} %>
+     <%= link_to "マイページへ" , mypage_path(current_user.id) ,{ class: "navigation-button-2"} %>
+     <% else %>
+     <%= link_to "登録はこちら" , new_user_path ,{class: "navigation-button"} %>
+     <%= link_to "ログイン" , login_path ,{ class: "navigation-button-2"} %>
+     <% end %>
+   </div>
+  </div>
+</div>
+
+<div class="spot-show-wrapper">
+  <div class="container">
+     <div class="row">
+       <div class="col-md-offset-2 col-md-6 spot-content">
+          <%= image_tag @spot.image.url, class:"user-image-spot" %>
+          <div class="spot-name">
+            <p class="spot-text">
+            <%= @spot.spot_name %>
+            </p>
+          </div>
+          <div class="spot-description">
+           <p class="spot-description-title">詳細</p>
+           <%= @spot.description %>
+          </div>
+          <% if !@spot.favorite_users.include?(current_user) %>
+           <%= link_to favorites_path(spot_id: @spot.id), method: :post do %>
+            <p class="favorite-spot text-center">お気に入りに登録</p>
+           <% end %>
+           
+           <% else %>
+           <%= link_to favorites_path(spot_id: @spot.id), method: :delete do %>
+           <p class="favorite-spot text-center">お気に入り解除</p>
+            <% end %>
+          <% end %>
+       </div>
+      </div>
+     </div>
+  </div>
+</div>
+
+
+</div>

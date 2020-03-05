@@ -1,5 +1,6 @@
 class SpotsController < ApplicationController
   def index
+    @spots = Spot.all.includes(:favorite_users)
   end
   
   def new
@@ -22,7 +23,7 @@ class SpotsController < ApplicationController
   
   private
   def user_params
-   params.require(:spot).permit(:spot_name, :description)
+   params.require(:spot).permit(:spot_name, :description, :image)
   end
   
 end

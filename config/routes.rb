@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   resources :mypages
   resources :profils
   resources :spots
-  resources :areas
+  resources :areas 
+  
+  get '/spots/:id', to: 'spots#show'
+  post '/spots/:id', to: 'spots#show'
+  
+  get 'favorites/index'
+  post '/favorites', to: 'favorites#create'
+  delete  '/favorites', to: 'favorites#destroy'
   
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
