@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   post '/favorites', to: 'favorites#create'
   delete  '/favorites', to: 'favorites#destroy'
   
+  get 'clears/index'
+  post '/clears', to: 'clears#create'
+  delete  '/clears', to: 'clears#destroy'
+  
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to:'sessions#destroy'

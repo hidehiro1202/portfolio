@@ -2,23 +2,10 @@
 
 <div class="back">
 
-<div class="navbar navbar-default navbar-fixed-top navbar-transparent">
- <div class="pull-right">
-   <div class="navigation">
-     <% if logged_in? %>
-     <%= link_to "TOPに戻る" , root_path ,{class: "navigation-button"} %>
-     <%= link_to "マイページへ" , mypage_path(current_user.id) ,{ class: "navigation-button-2"} %>
-     <% else %>
-     <%= link_to "登録はこちら" , new_user_path ,{class: "navigation-button"} %>
-     <%= link_to "ログイン" , login_path ,{ class: "navigation-button-2"} %>
-     <% end %>
-   </div>
-  </div>
-</div>
 
-<div class="side-menu">
-  <div class="container">
-    <div class="col-md-2 menu-content text-center">
+<div class="page-content">
+ <div class="side-menu">
+    <div class="menu-content text-center">
       <%= link_to "北海道", root_path %>
       </br>
       <%= link_to "東北地方", root_path %>
@@ -34,24 +21,21 @@
       <%= link_to "四国地方", root_path %>
       </br>
       <%= link_to "九州・沖縄地方", root_path %>
-    </div>
   </div>
-</div>
+ </div>
 
-<div class="tokyo-index-wrapper">
-  <div class="container">
+ <div class="tokyo-index-wrapper">
     <div class="row">
      <% @spots.each do |spot| %>
-       <div class="col-md-offset-4 col-md-6 slideshow">
+       <div class="slideshow">
          <%= link_to spot_path(id: spot.id), method: :post do %>
            <%= spot.spot_name %>
          <% end %>
        </div>
      <% end %>
     </div>
-  </div>
+ </div>
 </div>
-
 
 
 

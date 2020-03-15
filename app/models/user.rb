@@ -24,4 +24,7 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorite_spots, through: :favorites, source: 'spot'
   
+  has_many :clears
+  has_many :clear_spots, through: :clears, source: 'spot'
+  
 end

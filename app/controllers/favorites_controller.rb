@@ -1,7 +1,9 @@
 class FavoritesController < ApplicationController
   def index
   @favorite_spots = current_user.favorite_spots
+  @clear_spots = current_user.clear_spots
   end
+
   
   def create
     favorite = Favorite.new

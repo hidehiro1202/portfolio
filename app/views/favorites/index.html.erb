@@ -1,0 +1,41 @@
+ <!-- 「お気に入り」と「行ったことある地域」の表示 -->
+<div class= "favorite-clear-all">
+  <div class="favorite-spot-index">
+    <p class="favorite-title">お気に入り</p>  
+   <div class="favorite">
+    <% @favorite_spots.each do |spot| %>
+      <div class="favorite-content">
+       <%= image_tag spot.image.url, class:"favorite-image-spot" %>
+         <div class="favorite-spot-name">
+           <p class="favorite-spot-text">
+            <%= spot.spot_name %>
+           </p>
+         </div>
+         <div class="favorite-spot-description">
+          <p class="favorite-spot-description-title">詳細</p>
+           <%= spot.description %>
+         </div>
+    </div>
+    <% end %>
+ </div>
+ 
+ <div class="clear-spot-index">
+    <p class="clear-title">達成済み</p>
+   <div class="clear">
+    <% @clear_spots.each do |spot| %>
+     <div class="clear-content">
+      <%= image_tag spot.image.url, class:"clear-image-spot" %>
+        <div class="clear-spot-name">
+          <p class="clear-spot-text">
+           <%= spot.spot_name %>
+          </p>
+        </div>
+        <div class="clear-spot-description">
+         <p class="clear-spot-description-title">詳細</p>
+          <%= spot.description %>
+        </div>
+     </div>
+    <% end %>
+  </div>
+ </div>
+</div>
