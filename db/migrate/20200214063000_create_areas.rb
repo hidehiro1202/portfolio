@@ -3,7 +3,7 @@ class CreateAreas < ActiveRecord::Migration[5.2]
     create_table :areas do |t|
       
      t.string :area_name
-     t.integer :id
+#     t.integer :id
 
       t.timestamps
     end

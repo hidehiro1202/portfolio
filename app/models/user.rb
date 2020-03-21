@@ -20,11 +20,13 @@ class User < ApplicationRecord
 
   has_secure_password
   
-  has_many :mypages
+  has_one :mypage, dependent: :destroy
+  accepts_nested_attributes_for :mypage
   has_many :favorites
   has_many :favorite_spots, through: :favorites, source: 'spot'
   
   has_many :clears
   has_many :clear_spots, through: :clears, source: 'spot'
+
   
 end

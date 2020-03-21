@@ -5,4 +5,6 @@ class Spot < ApplicationRecord
     
     has_many :clears
     has_many :clear_users, through: :clears, source: 'user'
+    
+    
 end

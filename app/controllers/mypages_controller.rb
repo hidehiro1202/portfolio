@@ -1,11 +1,13 @@
 class MypagesController < ApplicationController
-  def index
-   @favorite_spots = current_user.favorite_spots
-  end    
+  
+#  def index
+#   @favorite_spots = current_user.favorite_spots
+#  end 
+  
   
   def show
-    @mypage = Mypage.find(params[:id])
-    @favorite_spots = current_user.favorite_spots
+    @mypage = Mypage.find_by(user_id: params[:id])
+
   end
   
   def edit
@@ -21,6 +23,7 @@ class MypagesController < ApplicationController
        render :edit
     end
   end
+
 
   
   private

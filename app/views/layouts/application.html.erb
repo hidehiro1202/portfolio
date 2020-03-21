@@ -7,16 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <!-- script src="//maps.google.com/maps/api/js?v=3.23&key=[AIzaSyCN5Mgb3BD6iz-Zto8GSwB_GIOxL7xh24o]" -->
 
   </head>
   <body>
     
+<!-- liでならべる-->    
 <div class="navbar navbar-default navbar-fixed-top navbar-transparent">
  <div class="pull-right">
    <div class="navigation">
      <% if logged_in? %>
      <%= link_to "TOPに戻る" , root_path ,{class: "navigation-button"} %>
      <%= link_to "マイページへ" , mypage_path(current_user.id) ,{ class: "navigation-button-2"} %>
+     <div class="navigation-button-2">
+     <%= link_to "ログアウト" , logout_path(current_user.id) ,method: :delete %>
+     </div>
      <% else %>
      <%= link_to "登録はこちら" , new_user_path ,{class: "navigation-button"} %>
      <%= link_to "ログイン" , login_path ,{ class: "navigation-button-2"} %>
@@ -24,6 +29,7 @@
    </div>
   </div>
 </div>
+
     
 <% flash.each do |key, value| %>
   <div class="alert alert-<%= key %>" role="alert"><%= value %></div>

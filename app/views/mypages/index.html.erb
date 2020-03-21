@@ -1,33 +1,31 @@
-
-
 <div class="mypage-profil-content">
- <div class="container">
-   <div class="row">
-     <div class="profil-title text-left">
-      <p>プロフィール</p>
-      <%= link_to "ユーザー登録", edit_mypage_path(current_user.id) , {class: "toroku-text" } %>
+   <div class="container">
+     <div class="row">
+     <div class="col-md-offset-4 col-md-4 profil-title text-left">
+      <p class= "user-title">プロフィール
+      <%= link_to "ユーザー情報編集", edit_mypage_path(current_user.id) , {class: "toroku-text" } %>
+      </p>
+      
+      <div class= "user-image-form">
+       <%= image_tag "icons/sample.png" %>
+      </div>
+      
+      <div class= "user-name">
+      <p class="user-form-text">ユーザー名</p>
+      <div class="user-name-in">
+        <%= current_user.name %>
+      </div>
+      </div>
+      
+     <div class= "user-description-form">
+     <p class="user-form-text">目標</p>
+      <div class="user-description-in">
+       <p>ここに目標が入ります</p>
+      </div>
      </div>
+     
+     <%= link_to favorites_index_path do %>
+     <p class="favorite-text text-center">お気に入りと達成済み一覧表示</p>
+     <% end %>
    </div>
- </div>
-</div>
-
-<div class="favorite-spot-index">
- <div class="container">
-  <% @favorite_spots.each do |spot| %>
-   <div class="row">
-    <div class="col-md-offset-6 col-md-5 favorite-content">
-          <%= image_tag spot.image.url, class:"favorite-image-spot" %>
-          <div class="favorite-spot-name">
-            <p class="favorite-spot-text">
-            <%= spot.spot_name %>
-            </p>
-          </div>
-          <div class="favorite-spot-description">
-           <p class="favorite-spot-description-title">詳細</p>
-           <%= spot.description %>
-          </div>
-    </div>
-   </div>
-   <% end %>
- </div>
 </div>
