@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :spots
   resources :areas 
   
+  get'/users/:id', to: 'users#show'
+  
   get'/mypages/:id', to: 'mypages#show'
   
   get '/spots/:id', to: 'spots#show'

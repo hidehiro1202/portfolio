@@ -17,6 +17,8 @@ class User < ApplicationRecord
 #パスワード登録時の条件(英字と数字が必要)
   validates :password, format: {with: VALID_PASSWORD_REGEX}
   
+  mount_uploader :image, ImageUploader
+  
 
   has_secure_password
   

@@ -7,7 +7,6 @@ class MypagesController < ApplicationController
   
   def show
     @mypage = Mypage.find_by(user_id: params[:id])
-
   end
   
   def edit

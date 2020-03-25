@@ -4,25 +4,31 @@
       <h1 class="user-h1-text text-center">登録画面</h1>
       <div class="col-md-offset-4 col-md-4 col-md-offset-4 form-user">
       <%= form_for @user do |f| %>
+         <div class="form-group">
+         <%= f.label :name, "ニックネーム", class: 'text-while' %>
+         <%= f.text_field :name, class: 'form-control' %>
+        </div>
         <div class="form-group">
-         <%= f.label :email, class: 'text-while ' %>
+         <%= f.label :description, "旅行の目標(空白でも可)", class: 'text-while ' %>
+         <%= f.text_field :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+         <%= f.label :image, "プロフィール画像(空白でも可)", class: 'text-while ' %>
+         <%= f.file_field :image, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+         <%= f.label :email, "メールアドレス", class: 'text-while ' %>
          <%= f.text_field :email, class: 'form-control' %>
         </div>
          <div class="form-group">
-         <%= f.label :name, class: 'text-while' %>
-         <%= f.text_field :name, class: 'form-control' %>
-        </div>
-         <div class="form-group">
-         <%= f.label :password, class: 'text-while' %>
+         <%= f.label :password, "パスワード", class: 'text-while' %>
          <%= f.password_field :password, class: 'form-control' %>
         </div>
         <div class="form-group">
-         <%= f.label :password_confirmation, class: 'text-while' %>
+         <%= f.label :password_confirmation, "パスワード(再)", class: 'text-while' %>
          <%= f.password_field :password_confirmation, class: 'form-control' %>
         </div>
 
-        <%= f.fields_for :mypage, @user.mypage do |pf| %>
-        <% end %>
 
       
         <%= f.submit "登録", class: 'btn-white' %>

@@ -1,0 +1,44 @@
+
+
+<div class="mypage-profil-content">
+   <div class="container">
+     <div class="row">
+     <div class="col-md-offset-4 col-md-4 profil-title text-left">
+      <p class= "user-title">プロフィール
+      <%= link_to "ユーザー情報編集", edit_user_path(current_user.id) , {class: "toroku-text" } %>
+      </p>
+      
+      <div class= "user-image-form">
+      <% if @user.image? %>
+       <%= image_tag @user.image.url, class:"user-image" %>
+      <% else %>
+       <%= image_tag "icons/sample.png" %>
+      <% end %>
+      </div>
+      
+      <div class= "user-name">
+      <p class="user-form-text">ユーザー名</p>
+      <div class="user-name-in">
+        <%= current_user.name %>
+      </div>
+      </div>
+      
+      <div class= "user-description-form">
+      <p class="user-form-text">目標</p>
+      <div class="user-description-in">
+       <% if @user.description? %>
+       <%= @user.description %>
+       <% else %>
+       <p>ここに目標が入ります</p>
+       <% end %>
+     </div>
+     </div>
+     
+     <%= link_to favorites_index_path do %>
+     <p class="favorite-text text-center">お気に入りと達成済み一覧表示</p>
+     <% end %>
+   </div>
+</div>
+
+
+
