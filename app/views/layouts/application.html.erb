@@ -17,14 +17,22 @@
  <div class="pull-right">
    <div class="navigation">
      <% if logged_in? %>
-     <%= link_to "TOPに戻る" , root_path ,{class: "navigation-button"} %>
-     <%= link_to "マイページへ" , user_path(current_user.id) ,{ class: "navigation-button-2"} %>
-     <div class="navigation-button-2">
-     <%= link_to "ログアウト" , logout_path(current_user.id) ,method: :delete %>
-     </div>
+      <li>
+       <%= link_to "TOPに戻る", root_path %>
+      </li>
+      <li>
+       <%= link_to "マイページへ" , user_path(current_user.id) %>
+      </li>
+      <li>
+       <%= link_to "ログアウト" , logout_path(current_user.id) ,method: :delete %>
+      </li>
      <% else %>
-     <%= link_to "登録はこちら" , new_user_path ,{class: "navigation-button"} %>
-     <%= link_to "ログイン" , login_path ,{ class: "navigation-button-2"} %>
+     <li>
+     <%= link_to "登録はこちら" , new_user_path %>
+     </li>
+     <li>
+     <%= link_to "ログイン" , login_path %>
+     </li>
      <% end %>
    </div>
   </div>

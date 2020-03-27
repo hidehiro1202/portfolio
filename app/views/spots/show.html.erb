@@ -27,12 +27,12 @@
           
            <% if !@spot.clear_users.include?(current_user) %>
            <%= link_to clears_path(spot_id: @spot.id), method: :post do %>
-            <p class="favorite-spot text-center">達成済みに登録</p>
+            <p class="clear-spot text-center">達成済みに登録</p>
            <% end %>
            
            <% else %>
            <%= link_to clears_path(spot_id: @spot.id), method: :delete do %>
-           <p class="favorite-spot text-center">達成済みを解除</p>
+           <p class="clear-spot text-center">達成済みを解除</p>
             <% end %>
           <% end %>
        </div>

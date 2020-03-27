@@ -65,6 +65,34 @@
   color: #fff;
 }
 
+.navigation-button-3{
+  padding: 10px 20px;
+  background-color: transparent;
+  border: solid 2px #20b2aa;
+  border-radius: 30px;
+  font-family: Comic Sans MS;
+  font-size: 15px;
+  color: #fff;
+  width: 150px;
+}
+
+.navigation{
+ display: flex;
+ list-style: none;
+ margin-right: -100px;
+  li{
+    margin-left: 30px;
+    border: solid 2px #20b2aa;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 30px;
+    padding: 3px 10px;
+    margin-top: -10px;
+   }
+}
+
+
+
 
 .pull-right{
   margin-right: 90px;
@@ -104,6 +132,7 @@
   background-size: auto 100% ;
   background-color: #fff0f5;
   background-attachment: fixed;
+  height: 400px;
   img{
     height: 230px;
     width: 380px;
@@ -140,27 +169,34 @@
 .middle-content{
   font-size: 35px;
   font-family: HiraMinPro-W6;
-  margin-bottom: -20px;
+  margin-bottom: 0px;
 }
 
 .under-content{
-  margin-top: 2s0px;
+  margin-top: 20px;
 }
 
 .top-content{
   margin-top: 30px;
+  display: inline;
 }
-
-
 .tiiki-content{
-  padding: 10px 10px;
-
+ padding-top: 10px;
 }
 
 .tiiki-text{
-  font-size: 15px;
+  font-size: 18px;
   font-family: Hiragino Kaku Gothic Pro;
   line-height: 35px;
+  border: solid 2px #20b2aa;
+  border-radius: 30px;
+  height: auto;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+
+.under-content-text{
+  font-size: 20px;
 }
 
 
@@ -211,7 +247,7 @@
   height: 80vh;
   
   .user-image {
-  width: 400px;
+  width: 350px;
   height: 200px;
   margin-left: -15px;
   margin-bottom: 10px;
@@ -224,7 +260,7 @@
 }
 
 .user-image-form{
-  padding-left: 20px;
+  padding-left: 45px;
   margin-top: 10px;
 }
 
@@ -287,12 +323,13 @@
 
 .tokyo-index-wrapper{
   display: inline-block;
-  margin-top: 120px;
   margin-left: 200px;
+  margin-top: 150px;
 }
 
 
 .menu-content {
+  margin-top: 120px;
   margin-left: 80px;
   height: 300px;
   width: 200px;
@@ -317,8 +354,12 @@
 .slideshow{
   margin-bottom: 20px;
   width: 500px;
-  height: 300px;
+  height: 120px;
   background-color: #fff;
+}
+
+.slideshow-title{
+  padding: 5px 10px;
 }
 
 
@@ -368,6 +409,16 @@
   margin-left: 160px;
   margin-top: 30px;
   margin-bottom: 20px;
+  padding-top: 17px;
+  border: solid 2px #b20000;
+  width: 200px;
+  height: 60px;
+  font-size: 14px;
+}
+
+.clear-spot{
+  margin-left: 410px;
+  margin-top: -80px;
   padding-top: 17px;
   border: solid 2px #b20000;
   width: 200px;
@@ -499,4 +550,14 @@
   padding-left: 30px;
   padding-top: 6px;
   margin-top: -60px;
+}
+
+.form-title{
+  margin-top: 120px;
+}
+
+.slideshow-text{
+  font-size: 20px;
+  padding-top: 8px;
+  padding-left: 80px;
 }

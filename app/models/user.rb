@@ -13,9 +13,10 @@ class User < ApplicationRecord
   validates :email, format: {with: VALID_EMAIL_REGEX}
   
 #パスワード登録時の条件(８文字以上３２文字以下)
-  validates :password, length: { in: 8..32 } 
+  validates :password, length: { in: 8..32 }, on: :create
 #パスワード登録時の条件(英字と数字が必要)
-  validates :password, format: {with: VALID_PASSWORD_REGEX}
+  validates :password, format: {with: VALID_PASSWORD_REGEX}, on: :create
+  validates :password, presence: true, on: :create
   
   mount_uploader :image, ImageUploader
   

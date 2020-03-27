@@ -25,15 +25,16 @@
  </div>
 
  <div class="tokyo-index-wrapper">
-    <div class="row">
      <% @spots.each do |spot| %>
        <div class="slideshow">
+        <p class="slideshow-title">観光名所</p>
          <%= link_to spot_path(id: spot.id), method: :post do %>
+         <div class="slideshow-text">
            <%= spot.spot_name %>
+         </div>
          <% end %>
        </div>
      <% end %>
-    </div>
  </div>
 </div>
 
