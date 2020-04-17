@@ -17,11 +17,11 @@
          <%= f.file_field :image, class: 'form-control' %>
         </div>
         <div class="form-group">
-         <%= f.label :email, "メールアドレス", class: 'text-while ' %>
+         <%= f.label :email, "メールアドレス(@とco.jpは必須)", class: 'text-while ' %>
          <%= f.text_field :email, class: 'form-control' %>
         </div>
          <div class="form-group">
-         <%= f.label :password, "パスワード", class: 'text-while' %>
+         <%= f.label :password, "パスワード(英数字含めた８文字以上が必須)", class: 'text-while' %>
          <%= f.password_field :password, class: 'form-control' %>
         </div>
         <div class="form-group">
